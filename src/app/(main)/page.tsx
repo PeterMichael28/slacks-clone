@@ -5,7 +5,7 @@ import { getUserData } from '@/actions/get-user-data';
 export default async function Home() {
  const userData = await getUserData();
 
- if (!userData) return redirect('/auth');
+ if (!userData || !userData?.id) return redirect('/auth');
 
  const userWorkspaceId = userData.workspaces?.[0];
 
