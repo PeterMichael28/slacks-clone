@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { Toaster } from 'sonner';
 import { Lato } from 'next/font/google';
+import "@uploadthing/react/styles.css";
 
 import '@/styles/globals.css';
+import { Toaster } from '@/components/ui/sonner';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   description: 'Slack clone with Michael',
 };
 
-// export const revalidate = 0;
+export const revalidate = 0;
 
 export default function RootLayout({
   children,
